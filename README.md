@@ -1,2 +1,2 @@
 # Wire
-takie tam
+siema eniu to taki plik do pisania tekstu jest
