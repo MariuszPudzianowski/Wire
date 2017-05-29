@@ -13,11 +13,12 @@ public class ObjElectrTail implements BoardObject {
 	}
 
 	@Override
-	public void addToBoard( Board b ) {
+	public void addToBoard( Board b, int ifBack ) {
 		try {
 			b.getCell( h, w ).setValue( 3 );
 		} catch( ArrayIndexOutOfBoundsException e ) {
-			new WindowError( "<html>Object is out of bounds.<br>" + getClass().getName() + ", " + h + ", " + w + "</html>" );
+			if( ifBack == 0 )
+				new WindowError( "<html>Object is out of bounds.<br>" + getClass().getName() + ", " + h + ", " + w + "</html>" );
 		}
 	}
 }

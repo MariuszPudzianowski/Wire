@@ -4,22 +4,39 @@ import java.awt.Container;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JPanel;
+import javax.swing.JLayeredPane;
+import java.awt.FlowLayout;
 
 public class Panel extends JPanel implements ActionListener {
 	
 	PanelBoard board;
+	Button start, stop, genNext, genPrev, fileS, fileL, confO, confL;
+	int k;
 	
 	public Panel( Container pane, PanelBoard board ) {
+		//setLayout(new FlowLayout());
 		this.board = board;
+		//pane.add( board );
+		//board.setBounds( 5, 10, 40, 40 );
  
-        Button start = new ButtonStart( 20, 500 );
-        Button stop = new ButtonStop( 20, 570 );
-        Button genNext = new ButtonGenNext( 140, 500 );
-        Button genPrev = new ButtonGenPrev( 140, 570 );
-        Button fileS = new ButtonFileS( 260, 500 );
-        Button fileL = new ButtonFileL( 260, 570 );
-        Button confO = new ButtonConfO( 380, 500 );
-        Button confL = new ButtonConfL( 380, 570 );
+        start = new ButtonStart( 20, 500 );
+        start.setEnabled( false );
+        
+        stop = new ButtonStop( 20, 570 );
+        stop.setEnabled( false );
+        
+        genNext = new ButtonGenNext( 140, 500 );
+        genNext.setEnabled( false );
+        
+        genPrev = new ButtonGenPrev( 140, 570 );
+        genPrev.setEnabled( false );
+       
+        fileS = new ButtonFileS( 260, 500 );
+        fileS.setEnabled( false );
+        
+        fileL = new ButtonFileL( 260, 570 );
+        confO = new ButtonConfO( 380, 500 );
+        confL = new ButtonConfL( 380, 570 );
         
         start.addActionListener( this );
         stop.addActionListener( this );
@@ -45,15 +62,53 @@ public class Panel extends JPanel implements ActionListener {
 	public void actionPerformed( ActionEvent event ) {
 		Object source = event.getSource();
 
+		
+		//System.out.println(k);
+		
+		
+		
 		if( source instanceof ButtonConfO ) {
 			( (ButtonConfO) source ).open();
 		} else if( source instanceof ButtonConfL ) {
 			( (ButtonConfL) source ).load( this );
+			if( board.b != null ) {
+				start.setEnabled( true );
+				genNext.setEnabled( true );
+				fileS.setEnabled( true );
+				k = 0;
+			}
 		} else if( source instanceof ButtonFileL ) {
 			( (ButtonFileL) source ).load( this );
+			if( board.b != null ) {
+				start.setEnabled( true );
+				genNext.setEnabled( true );
+				fileS.setEnabled( true );
+				k = 0;
+			}
 		} else if( source instanceof ButtonFileS ) {
 			( (ButtonFileS) source ).save( board.b );
+		} else if( source instanceof ButtonGenNext ) {
+			( (ButtonGenNext) source ).next( board );
+			k++;
+		} else if( source instanceof ButtonGenPrev ) {
+			( (ButtonGenPrev) source ).prev( board, k );
+			k--;
 		}
+		
+		if( board.b != null) {
+			if( k == board.b.gen )
+				genNext.setEnabled( false );
+			else
+				genNext.setEnabled( true );
+			
+			if( k > 0 )
+				genPrev.setEnabled( true );
+			else
+				genPrev.setEnabled( false );
+		}
+		//this.repaint();
+		//revalidate();
+		
 	}
 
 }

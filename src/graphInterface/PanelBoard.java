@@ -4,10 +4,12 @@ import java.awt.*;
 import java.awt.geom.*;
 import javax.swing.*;
 import java.awt.FlowLayout;
+import javax.swing.JLayeredPane;
+
 
 import javax.swing.JPanel;
 
-public class PanelBoard extends JPanel {
+public class PanelBoard extends JLayeredPane {
 	
 	public Wire.Board b;
 
@@ -15,6 +17,7 @@ public class PanelBoard extends JPanel {
 	@Override
 	protected void paintComponent(Graphics g) {
 		if( b != null && b.getSize() != 0 ) {
+			
 			super.paintComponent(g);
 			Graphics2D g2d = (Graphics2D) g;
 	        
@@ -41,5 +44,7 @@ public class PanelBoard extends JPanel {
 	        }
 		}
 	}
+	
+	
 	
 }

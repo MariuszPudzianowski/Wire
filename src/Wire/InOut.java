@@ -39,7 +39,7 @@ public class InOut {
 						return 0;
 					}
 				} catch( NumberFormatException e ) {
-					new WindowError( "Config: The number given is not int" );
+					new WindowError( "Config: The number given is not int " );
 				} catch( ArrayIndexOutOfBoundsException e ) {
 					new WindowError( "Config: No data given." );
 				}
@@ -58,7 +58,7 @@ public class InOut {
 	}
 	
 	
-	public static void readObjects( File config, Board b ) {
+	public static void readObjects( File config, Board b, int ifBack ) {
 		
 		BoardObject obj = null;
 		//File config = new File( path );
@@ -78,21 +78,22 @@ public class InOut {
 				while( ( line = readBoard.readLine() ) != null ) {
 					param = line.split( ",\\s+" );
 					
+					
 					try {
 						switch( param[0].toLowerCase() ) {
 							case "wire":
 								obj = new ObjWire( Integer.parseInt(param[1]), Integer.parseInt(param[2]), Integer.parseInt(param[3]), Integer.parseInt(param[4]) );
-								obj.addToBoard( b );
+								obj.addToBoard( b, ifBack );
 								break;
 							
 							case "electrhead":
 								obj = new ObjElectrHead( Integer.parseInt(param[1]), Integer.parseInt(param[2]) );
-								obj.addToBoard( b );
+								obj.addToBoard( b, ifBack );
 								break;
 							
 							case "electrtail":
 								obj = new ObjElectrTail( Integer.parseInt(param[1]), Integer.parseInt(param[2]) );
-								obj.addToBoard( b );
+								obj.addToBoard( b, ifBack );
 								break;
 								
 							default:
@@ -110,24 +111,30 @@ public class InOut {
 										break;
 										
 									default:
-										new WindowError( "<html>Config: No object in line.<br>" + line + "</html>" );
+										if( ifBack == 0 )
+											new WindowError( "<html>Config: No object in line.<br>" + line + "</html>" );
 								}
 								
-								if( !param[3].equalsIgnoreCase("right") && !param[3].equalsIgnoreCase("left") && !param[3].equalsIgnoreCase("up") && !param[3].equalsIgnoreCase("down") )
-									new WindowError( "<html>Config: The direction is not up, down, left or right.<br>" + line + "</html>" );
+								if( !param[3].equalsIgnoreCase("right") && !param[3].equalsIgnoreCase("left") && !param[3].equalsIgnoreCase("up") && !param[3].equalsIgnoreCase("down") ) {
+									if( ifBack == 0 )
+										new WindowError( "<html>Config: The direction is not up, down, left or right.<br>" + line + "</html>" );
+								}
 								else	
-									obj.addToBoard( b );
+									obj.addToBoard( b, ifBack );
 								
 						}
 						
 					} catch( NumberFormatException e ) {
-						new WindowError( "<html>Config: The number given is not int.<br>" + line + "</html>" );
+						if( ifBack == 0 )
+							new WindowError( "<html>Config: The number given is not int.<br>" + line + "</html>" );
 					} catch( ArrayIndexOutOfBoundsException e ) {
-						new WindowError( "<html>Config: No data given.<br>" + line + "</html>" );
+						if( ifBack == 0 )
+							new WindowError( "<html>Config: No data given.<br>" + line + "</html>" );
 					}	
 				}
 			} catch( IOException e ) {
-				new WindowError( "Config: IOException." );
+				if( ifBack == 0 )
+					new WindowError( "Config: IOException." );
 			}
 		
 		} catch( FileNotFoundException e ) {

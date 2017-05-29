@@ -16,10 +16,11 @@ public class ObjWire implements BoardObject {
 	}
 	
 	@Override
-	public void addToBoard( Board b ) {
+	public void addToBoard( Board b, int ifBack ) {
 		
 		if( hEnd-hStart != 0 && wEnd-wStart != 0 && Math.abs(hEnd-hStart) != Math.abs(wEnd-wStart) ) {
-			new WindowError( "<html>Wire is neither horizontal, vertical nor 45 degr.<br>" + getClass().getName() + ", " + hStart + ", " + wStart + ", " + hEnd + ", " + wEnd + "</html>" );
+			if( ifBack == 0 )
+				new WindowError( "<html>Wire is neither horizontal, vertical nor 45 degr.<br>" + getClass().getName() + ", " + hStart + ", " + wStart + ", " + hEnd + ", " + wEnd + "</html>" );
 			return;
 		}
 			
@@ -37,7 +38,8 @@ public class ObjWire implements BoardObject {
 			} while( i != hEnd+hStep || j != wEnd+wStep );
 						
 		} catch( ArrayIndexOutOfBoundsException e ) {
-			new WindowError( "<html>Object is out of bounds.<br>" + getClass().getName() + ", " + hStart + ", " + wStart + ", " + hEnd + ", " + wEnd + "</html>" );
+			if( ifBack == 0 )
+				new WindowError( "<html>Object is out of bounds.<br>" + getClass().getName() + ", " + hStart + ", " + wStart + ", " + hEnd + ", " + wEnd + "</html>" );
 		}
 	}
 }

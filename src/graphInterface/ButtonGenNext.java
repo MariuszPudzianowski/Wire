@@ -6,8 +6,9 @@ public class ButtonGenNext extends Button {
 		super( x, y, "Gen +1" );
 	}
 	
-	public void stop () {
-		
+	public void next ( PanelBoard p ) {
+		p.b.nextGen();
+		p.repaint();
 	}
 	
 }

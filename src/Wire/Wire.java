@@ -19,7 +19,7 @@ public class Wire {
 		
 		Board gameBoard = new Board( InOut.readParameters(plik, 0), InOut.readParameters(plik, 1), plik );
 		
-		InOut.readObjects( plik, gameBoard );
+		InOut.readObjects( plik, gameBoard, 0 );
 		
 		System.out.println( gameBoard );
 		

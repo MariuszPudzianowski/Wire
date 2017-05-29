@@ -2,6 +2,6 @@ package Wire;
 
 public interface BoardObject {
 	
-	public void addToBoard( Board b );
+	public void addToBoard( Board b, int ifBack );
 	
 }

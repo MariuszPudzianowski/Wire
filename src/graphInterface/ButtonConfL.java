@@ -16,8 +16,10 @@ public class ButtonConfL extends Button {
 		p.board.b = new Wire.Board( Wire.InOut.readParameters( config, 0 ), Wire.InOut.readParameters( config, 1 ), config );
 		
 		if( p.board.b.getSize() != 0 && p.board.b.gen != 0 ) {
-			InOut.readObjects( config, p.board.b );
+			InOut.readObjects( config, p.board.b, 0 );
+			//revalidate();
 			p.board.repaint();
+			//revalidate();
 		}
 	}
 	

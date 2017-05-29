@@ -97,13 +97,14 @@ public class Board {
 	
 	
 	public void nextGen() {
-		Board newBoard = new Board( this.size, this.gen-1, this.source );
+		Board newBoard = new Board( this.size, this.gen, this.source );
 		
 		for( int i=0; i<size; i++ )
 			for( int j=0; j<size; j++ )
 				newBoard.cells[i][j].setValue( cells[i][j].newValue( i, j ) );
 		
 		cells = newBoard.cells;
+		//gen--;
 	}
 	
 	

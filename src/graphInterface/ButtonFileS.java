@@ -24,10 +24,13 @@ public class ButtonFileS extends Button {
 				String [] param;
 				
 				while( ( line = readBoard.readLine() ) != null ) {
-					if( !line.toLowerCase().startsWith( "electrhead" ) && !line.toLowerCase().startsWith( "electrtail" ) )
+					if( !line.toLowerCase().startsWith( "electrhead" ) && !line.toLowerCase().startsWith( "electrtail" ) ) {
+						System.out.println(line);
 						saver.println( line );
+					}
 					else {
 						param = line.split( ",\\s+" );
+						System.out.println(line);
 						saver.println( "wire, " + param[1] + ", " + param[2] + ", " + param[1] + ", " + param[2] );
 					}
 				}

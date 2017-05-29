@@ -24,7 +24,7 @@ public class ButtonFileL extends Button {
 		    	p.board.b = new Wire.Board( Wire.InOut.readParameters( selectedFile, 0 ), Wire.InOut.readParameters( selectedFile, 1 ), selectedFile );
 		
 				if( p.board.b.getSize() != 0 && p.board.b.gen != 0 ) {
-					InOut.readObjects( selectedFile, p.board.b );
+					InOut.readObjects( selectedFile, p.board.b, 0 );
 					p.board.repaint();
 				}
 		    }

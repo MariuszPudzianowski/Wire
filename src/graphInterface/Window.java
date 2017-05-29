@@ -1,6 +1,11 @@
 package graphInterface;
 
+import java.awt.Dimension;
+
 import javax.swing.JFrame;
+import javax.swing.OverlayLayout;
+import java.awt.GridLayout;
+import java.awt.FlowLayout;
 
 import Wire.InOut;
 
@@ -17,12 +22,16 @@ public class Window extends JFrame {
 		setSize( width, height );
 		setResizable( false );
 		setLocationRelativeTo( null );
+		
+		//setLayout(new OverLay());
+		//setLayout(new GridLayout(5, 20));
 
-		PanelBoard board = new PanelBoard();
-		Panel buttons = new Panel( this, board );
+		//PanelBoard board = new PanelBoard();
+		Panel buttons = new Panel( this, new PanelBoard() );
+		
 		
 		add( buttons );
-		add( board );
+		add( buttons.board );
 		
 		setVisible( true );
 		

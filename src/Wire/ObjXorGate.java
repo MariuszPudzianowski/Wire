@@ -15,7 +15,7 @@ public class ObjXorGate implements BoardObject {
 	}
 	
 	@Override
-	public void addToBoard( Board b ) {
+	public void addToBoard( Board b, int ifBack ) {
 		
 		int step = ( direction.equalsIgnoreCase("right") || direction.equalsIgnoreCase("down") ) ? 1 : -1;
 		
@@ -63,7 +63,8 @@ public class ObjXorGate implements BoardObject {
 				b.getCell( h+4*step, w ).setValue( 1 );
 			}
 		} catch( ArrayIndexOutOfBoundsException e ) {
-			new WindowError( "<html>Object is out of bounds.<br>" + getClass().getName() + ", " + h + ", " + w + "</html>" );
+			if( ifBack == 0 )
+				new WindowError( "<html>Object is out of bounds.<br>" + getClass().getName() + ", " + h + ", " + w + "</html>" );
 		}
 	}
 }

@@ -4,7 +4,7 @@ wire, 5, 5, 6, 6
 aaa, 10, 4
 electrhead, 3, 40
 wire, 0, 0, 6, 0
-electrtail 0, 0
+electrtail, 0, 0
 wire, 3, 3, 7, 12
 orgate, 4, 4, up
 electrhead, 5, 2

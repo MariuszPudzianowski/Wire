@@ -9,7 +9,7 @@ public class Main {
 		//Wire.Wire.main(args);
 //		Window aaa = new Window();
 //		aaa.board.repaint();
-		/* plansza rysowanie bez usuwania przyciskow */
+		/* poprawic save        cofanie z bledami*/
 		
 		EventQueue.invokeLater(new Runnable() {
 
