@@ -15,7 +15,7 @@ public class InOut {
 	public static int readParameters( File config, int ifGen ) {
 		int retNumber = 0;
 		int maxSize = 50;
-		int maxGen = 10;
+		int maxGen = 50;
 		
 		//File config = new File( path );
 		

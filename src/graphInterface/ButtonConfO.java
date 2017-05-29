@@ -12,6 +12,8 @@ public class ButtonConfO extends Button {
 	
 	public void open () {
 		File config = new File( "config/board.txt" );
+//		System.out.println( config.lastModified() );
+//		System.out.println( System.currentTimeMillis() );
 		try {
 		    Desktop.getDesktop().edit( config );
 		} catch( IOException e ) {

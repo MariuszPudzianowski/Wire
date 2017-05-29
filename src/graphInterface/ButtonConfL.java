@@ -4,6 +4,10 @@ import java.awt.Container;
 
 import Wire.InOut;
 import java.io.File;
+import java.nio.file.Files;
+import static java.nio.file.StandardCopyOption.*;
+import java.nio.file.Paths;
+import java.io.IOException;
 
 public class ButtonConfL extends Button {
 
@@ -12,15 +16,17 @@ public class ButtonConfL extends Button {
 	}
 	
 	public void load ( Panel p ) {
+		
 		File config = new File( "config/board.txt" );
+	
 		p.board.b = new Wire.Board( Wire.InOut.readParameters( config, 0 ), Wire.InOut.readParameters( config, 1 ), config );
 		
 		if( p.board.b.getSize() != 0 && p.board.b.gen != 0 ) {
 			InOut.readObjects( config, p.board.b, 0 );
-			//revalidate();
 			p.board.repaint();
-			//revalidate();
 		}
+			
+		
 	}
 	
 }

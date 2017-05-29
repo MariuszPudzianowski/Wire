@@ -6,6 +6,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Calendar;
 
 public class ButtonFileS extends Button {
 
@@ -16,7 +17,19 @@ public class ButtonFileS extends Button {
 	public void save ( Wire.Board b ) {
 		try {
 			BufferedReader readBoard = new BufferedReader( new FileReader( b.source ) );
-			File toSave = new File( "saves/save.txt" );
+			//System.out.println(b.source);
+			//Calendar rightNow = GregorianCalendar.getInstance();
+			String year = Integer.toString( Calendar.getInstance().get(Calendar.YEAR) );
+			String month = Integer.toString(Calendar.getInstance().get(Calendar.MONTH)+1 );
+			String day = Integer.toString(Calendar.getInstance().get(Calendar.DAY_OF_MONTH) );
+			String hour = Integer.toString(Calendar.getInstance().get(Calendar.HOUR_OF_DAY) );
+			String minute = Integer.toString(Calendar.getInstance().get(Calendar.MINUTE) );
+			String sec = Integer.toString(Calendar.getInstance().get(Calendar.SECOND) );
+			String ms = Integer.toString(Calendar.getInstance().get(Calendar.MILLISECOND) );
+			String now = year + "_" + month + "_" + day + "_" + hour + "_" + minute + "_" + sec + "_" + ms;
+			//System.out.println( now );
+			
+			File toSave = new File( "saves/s" + now + ".txt" );
 			PrintWriter saver = new PrintWriter( toSave );
 			
 			try {
@@ -25,12 +38,12 @@ public class ButtonFileS extends Button {
 				
 				while( ( line = readBoard.readLine() ) != null ) {
 					if( !line.toLowerCase().startsWith( "electrhead" ) && !line.toLowerCase().startsWith( "electrtail" ) ) {
-						System.out.println(line);
+						//System.out.println(line);
 						saver.println( line );
 					}
 					else {
 						param = line.split( ",\\s+" );
-						System.out.println(line);
+						//System.out.println(line);
 						saver.println( "wire, " + param[1] + ", " + param[2] + ", " + param[1] + ", " + param[2] );
 					}
 				}

@@ -9,7 +9,7 @@ public class Main {
 		//Wire.Wire.main(args);
 //		Window aaa = new Window();
 //		aaa.board.repaint();
-		/* poprawic save        cofanie z bledami*/
+		/* poprawic save */
 		
 		EventQueue.invokeLater(new Runnable() {
 

@@ -89,6 +89,7 @@ public class Panel extends JPanel implements ActionListener {
 			( (ButtonFileS) source ).save( board.b );
 		} else if( source instanceof ButtonGenNext ) {
 			( (ButtonGenNext) source ).next( board );
+			
 			k++;
 		} else if( source instanceof ButtonGenPrev ) {
 			( (ButtonGenPrev) source ).prev( board, k );

@@ -1,8 +1,6 @@
-size 30
-generations 5
-wire, 5, 5, 5, 19
+size 25
+generations 40
+wire, 5, 5, 5, 18
 electrhead, 5, 6
 electrtail, 5, 5
-electrtail, 10, 10
-diode, 10, 10, up
-wire, 7, 8, 15, 16
+electrtail, 5, 1
