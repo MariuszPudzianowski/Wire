@@ -4,8 +4,6 @@ import java.awt.Container;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JPanel;
-import javax.swing.JLayeredPane;
-import java.awt.FlowLayout;
 
 public class Panel extends JPanel implements ActionListener {
 	
@@ -14,10 +12,7 @@ public class Panel extends JPanel implements ActionListener {
 	int k;
 	
 	public Panel( Container pane, PanelBoard board ) {
-		//setLayout(new FlowLayout());
 		this.board = board;
-		//pane.add( board );
-		//board.setBounds( 5, 10, 40, 40 );
  
         start = new ButtonStart( 20, 500 );
         start.setEnabled( false );
@@ -62,11 +57,6 @@ public class Panel extends JPanel implements ActionListener {
 	public void actionPerformed( ActionEvent event ) {
 		Object source = event.getSource();
 
-		
-		//System.out.println(k);
-		
-		
-		
 		if( source instanceof ButtonConfO ) {
 			( (ButtonConfO) source ).open();
 		} else if( source instanceof ButtonConfL ) {
@@ -89,7 +79,6 @@ public class Panel extends JPanel implements ActionListener {
 			( (ButtonFileS) source ).save( board.b );
 		} else if( source instanceof ButtonGenNext ) {
 			( (ButtonGenNext) source ).next( board );
-			
 			k++;
 		} else if( source instanceof ButtonGenPrev ) {
 			( (ButtonGenPrev) source ).prev( board, k );
@@ -107,9 +96,6 @@ public class Panel extends JPanel implements ActionListener {
 			else
 				genPrev.setEnabled( false );
 		}
-		//this.repaint();
-		//revalidate();
-		
 	}
 
 }

@@ -2,17 +2,11 @@ package graphInterface;
 
 import java.awt.*;
 import java.awt.geom.*;
-import javax.swing.*;
-import java.awt.FlowLayout;
 import javax.swing.JLayeredPane;
-
-
-import javax.swing.JPanel;
 
 public class PanelBoard extends JLayeredPane {
 	
 	public Wire.Board b;
-
 	
 	@Override
 	protected void paintComponent(Graphics g) {
@@ -39,7 +33,6 @@ public class PanelBoard extends JLayeredPane {
 	        		g.setColor(Color.BLACK);
 	        		Rectangle2D rect = new Rectangle2D.Double( 20+squareSize*j, 20+squareSize*i, squareSize, squareSize );
 	        		g2d.draw(rect);
-	        		
 	        	}
 	        }
 		}

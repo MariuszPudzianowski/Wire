@@ -4,21 +4,20 @@ import graphInterface.WindowError;
 
 public class ObjDiode implements BoardObject {
 
-	String direction;
-	int h, w;
+	private String direction;
+	private int h, w, step;
 	
 	public ObjDiode( int h, int w, String direction ) {
 		this.direction = direction;
 		this.h = h;
 		this.w = w;
+		step = ( direction.equalsIgnoreCase("right") || direction.equalsIgnoreCase("down") ) ? 1 : -1;
 	}
 	
 	
 	@Override
 	public void addToBoard( Board b, int ifBack ) {
 	
-		int step = ( direction.equalsIgnoreCase("right") || direction.equalsIgnoreCase("down") ) ? 1 : -1;
-		
 		try {
 			if( direction.equalsIgnoreCase("right") || direction.equalsIgnoreCase("left") ) {
 				

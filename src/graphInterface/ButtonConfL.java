@@ -1,13 +1,8 @@
 package graphInterface;
 
-import java.awt.Container;
-
 import Wire.InOut;
 import java.io.File;
-import java.nio.file.Files;
-import static java.nio.file.StandardCopyOption.*;
-import java.nio.file.Paths;
-import java.io.IOException;
+
 
 public class ButtonConfL extends Button {
 

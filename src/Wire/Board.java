@@ -16,8 +16,7 @@ public class Board {
 			return value;
 		}
 		
-		
-		public int checkNeighbours( int h, int w ) {
+		private int checkNeighbours( int h, int w ) {
 			int neighbours = 0;
 			
 			if( h > 0 ) {
@@ -101,23 +100,9 @@ public class Board {
 		
 		for( int i=0; i<size; i++ )
 			for( int j=0; j<size; j++ )
-				newBoard.cells[i][j].setValue( cells[i][j].newValue( i, j ) );
+				newBoard.cells[i][j].value = cells[i][j].value;
 		
 		cells = newBoard.cells;
-		//gen--;
-	}
-	
-	
-	@Override
-	public String toString() {
-		StringBuilder s = new StringBuilder();
-		for( int i=0; i<size; i++ ) {
-			for( int j=0; j<size; j++ )
-				s.append( Integer.toString( cells[i][j].value ) );
-			s.append("\n");
-		}
-		
-		return s.toString();
 	}
 	
 }

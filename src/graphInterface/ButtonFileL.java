@@ -1,10 +1,7 @@
 package graphInterface;
 
 import javax.swing.JFileChooser;
-//import java.awt.Container;
-
 import Wire.InOut;
-
 import java.io.File;
 
 public class ButtonFileL extends Button {

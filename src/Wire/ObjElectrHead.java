@@ -4,8 +4,7 @@ import graphInterface.WindowError;
 
 public class ObjElectrHead implements BoardObject {
 	
-	int h;
-	int w;
+	private int h, w;
 	
 	public ObjElectrHead( int h, int w ) {
 		this.h = h;

@@ -6,11 +6,6 @@ public class Main {
 
 	public static void main(String[] args) {
 		
-		//Wire.Wire.main(args);
-//		Window aaa = new Window();
-//		aaa.board.repaint();
-		/* poprawic save */
-		
 		EventQueue.invokeLater(new Runnable() {
 
 			@Override
