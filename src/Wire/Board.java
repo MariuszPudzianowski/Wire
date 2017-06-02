@@ -70,10 +70,11 @@ public class Board {
 	}
 	
 	
-	private int size;
+	private final int size;
+	public final int gen;
+	public final File source;
+	
 	private Cell cells[][];
-	public int gen;
-	public File source;
 	
 	public Board( int size, int gen, File source ) {
 		this.size = size;
@@ -100,7 +101,7 @@ public class Board {
 		
 		for( int i=0; i<size; i++ )
 			for( int j=0; j<size; j++ )
-				newBoard.cells[i][j].value = cells[i][j].value;
+				newBoard.cells[i][j].value = cells[i][j].newValue(i, j);
 		
 		cells = newBoard.cells;
 	}

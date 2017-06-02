@@ -8,15 +8,14 @@ public class ButtonGenPrev extends Button {
 		super( x, y, "Gen -1" );
 	}
 	
-	public void prev ( PanelBoard p, int k ) {
+	public void prev ( PanelBoard p, int g ) {
 		Wire.Board newBoard = new Wire.Board( p.b.getSize(), Wire.InOut.readParameters( p.b.source, 1 ), p.b.source );
 		InOut.readObjects( p.b.source, newBoard, 1 );
 
 		p.b = newBoard;
 		
-		for( int i=0; i<k-1; i++) {
+		for( int i=1; i<g-1; i++) {
 			p.b.nextGen();
-			
 		}
 		p.repaint();
 	}
