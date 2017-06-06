@@ -71,7 +71,6 @@ public class InOut {
 	 * 
 	 * @param config œcie¿ka pliku konfiguracyjnego
 	 * @param b tablica komórek
-	 * @param ifBack
 	 */
 	public static void readObjects( File config, Board b, int ifBack ) {
 		

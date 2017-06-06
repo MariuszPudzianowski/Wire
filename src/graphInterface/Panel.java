@@ -27,7 +27,6 @@ public class Panel extends JPanel implements ActionListener {
 	 * @param board zape³niany obszar planszy
 	 */
 	public Panel( Container pane, PanelBoard board ) {
-		//this.board = new PanelBoard();
 		this.board = board;
  
         start = new ButtonStart( 20, 500 );
@@ -105,7 +104,6 @@ public class Panel extends JPanel implements ActionListener {
 				genNext.setEnabled( false );
 				start.setEnabled( false );
 			}
-			//System.out.println("next " + g);
 		} else if ( source instanceof ButtonGenPrev ) {
 			( (ButtonGenPrev) source ).prev( board, g );
 			g--;
@@ -113,7 +111,6 @@ public class Panel extends JPanel implements ActionListener {
 			start.setEnabled( true );
 			if (g == 1)
 				genPrev.setEnabled( false );
-			//System.out.println("prev " + g);
 		} else if ( source instanceof ButtonStart ) {
 			start.setEnabled( false );
 			stop.setEnabled( true );

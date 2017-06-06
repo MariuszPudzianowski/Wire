@@ -57,7 +57,6 @@ public class ButtonStart extends Button implements Runnable {
 			p.board.b.nextGen();
 			p.board.repaint();
 			p.g++;
-			//System.out.println("start " + p.g);
 			try {
 				Thread.sleep(500);
 			} catch (InterruptedException e) {
