@@ -4,10 +4,20 @@ import java.awt.*;
 import java.awt.geom.*;
 import javax.swing.JLayeredPane;
 
+/**
+ * Klasa reprezentuje obszar planszy z³o¿ony z kwadratów.
+ * Ka¿dy kwadrat mo¿e byæ jednego z czterech kolorów (¿ó³ty, niebieski, czerwony lub bia³y).
+ * 
+ * @author Maciej Tarnowski, Marcin Krasuski
+ */
 public class PanelBoard extends JLayeredPane {
 	
 	public Wire.Board b;
 	
+	/**
+	 * Metoda pokrywa wszystkie kwadraty obszary planszy zgodnie z aktualnym jej stanem.
+	 * Korzysta w tym celu z paczki java.awt oraz metod klasy javax.Swing.JLayeredPane.
+	 */
 	@Override
 	protected void paintComponent(Graphics g) {
 		if( b != null && b.getSize() != 0 ) {

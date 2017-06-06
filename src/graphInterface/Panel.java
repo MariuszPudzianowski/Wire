@@ -5,6 +5,11 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JPanel;
 
+/**
+ * Klasa reprezentuje interaktywny obszar okna sk³adaj¹cy siê z obszaru wyœwietlanej generacji oraz przycisków do jego obs³ugi.
+ * 
+ * @author Maciej Tarnowski, Marcin Krasuski
+ */
 public class Panel extends JPanel implements ActionListener {
 	
 	PanelBoard board;
@@ -13,7 +18,16 @@ public class Panel extends JPanel implements ActionListener {
 	boolean isRunning = false;
 	boolean isPaused;
 	
+	/**
+	 * Konstruktor tworzy now¹ zawartoœæ okna (panel) o ustalonym stanie.
+	 * Funkcje, wygl¹d i rozmieszczenie przycisków s¹ okreœlone tak samo, jak pocz¹tkowy stan obszaru planszy,
+	 * który zawsze po uruchomieniu jest pusty.
+	 * 
+	 * @param pane kontener przechowuj¹cy przyciski
+	 * @param board zape³niany obszar planszy
+	 */
 	public Panel( Container pane, PanelBoard board ) {
+		//this.board = new PanelBoard();
 		this.board = board;
  
         start = new ButtonStart( 20, 500 );
@@ -55,6 +69,9 @@ public class Panel extends JPanel implements ActionListener {
 
     }
 	
+	/**
+	 * Metoda okreœla akcjê nastêpuj¹c¹ po klikniêciu danego przycisku.
+	 */
 	@Override
 	public void actionPerformed( ActionEvent event ) {
 		Object source = event.getSource();
@@ -88,7 +105,7 @@ public class Panel extends JPanel implements ActionListener {
 				genNext.setEnabled( false );
 				start.setEnabled( false );
 			}
-			System.out.println("next " + g);
+			//System.out.println("next " + g);
 		} else if ( source instanceof ButtonGenPrev ) {
 			( (ButtonGenPrev) source ).prev( board, g );
 			g--;
@@ -96,7 +113,7 @@ public class Panel extends JPanel implements ActionListener {
 			start.setEnabled( true );
 			if (g == 1)
 				genPrev.setEnabled( false );
-			System.out.println("prev " + g);
+			//System.out.println("prev " + g);
 		} else if ( source instanceof ButtonStart ) {
 			start.setEnabled( false );
 			stop.setEnabled( true );
@@ -130,16 +147,6 @@ public class Panel extends JPanel implements ActionListener {
 		if( board.b != null) {
 			if (isRunning == false && g != board.b.gen)
 				start.setEnabled( true );
-			
-			/*if( (isRunning == false || isPaused == true) && g != board.b.gen )
-				genNext.setEnabled( true );
-			else
-				genNext.setEnabled( false );
-				
-			if( (isRunning == false || isPaused == true) && g > 0 )
-				genPrev.setEnabled( true );
-			else
-				genPrev.setEnabled( false );*/
 		}
 	}
 

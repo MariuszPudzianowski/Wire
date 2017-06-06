@@ -2,12 +2,23 @@ package Wire;
 
 import graphInterface.WindowError;
 
+/**
+ * Klasa reprezentuje obiekt - bramkê OR.
+ * 
+ * @author Maciej Tarnowski, Marcin Krasuski
+ */
 public class ObjOrGate implements BoardObject {
 
 	private String direction;
 	private int h, w, step;
 	
-	
+	/**
+	 * Konstruktor ustala parametry bramki.
+	 * 
+	 * @param h wspó³rzêdna y
+	 * @param w wspó³rzêdna x
+	 * @param direction kierunek obiektu
+	 */
 	public ObjOrGate( int h, int w, String direction ) {
 		this.direction = direction;
 		this.h = h;
@@ -15,6 +26,10 @@ public class ObjOrGate implements BoardObject {
 		step = ( direction.equalsIgnoreCase("right") || direction.equalsIgnoreCase("down") ) ? 1 : -1;
 	}
 	
+	/**
+	 * Metoda umieszcza bramkê na planszy.
+	 * Je¿eli obiekt wychodzi poza planszê, wyœwietlany jest komunikat o b³êdzie.
+	 */
 	@Override
 	public void addToBoard( Board b, int ifBack ) {
 		
