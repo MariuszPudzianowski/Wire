@@ -8,8 +8,21 @@ import java.io.IOException;
 
 import graphInterface.WindowError;
 
+/**
+ * Klasa reprezentuje przep³yw danych miêdzy plikiem konfiguracyjnym, a aplikacj¹.
+ * 
+ * @author Maciej Tarnowski, Marcin Krasuski
+ */
 public class InOut {
 
+	/**
+	 * Metoda czyta parametry wielkoœci planszy i liczby generacji z pliku konfiguracyjnego o okreœlonej œcie¿ce.
+	 * Plik konfiguracyjny powinien byæ zapisany w folderze "config" pod nazw¹ "board.txt".
+	 * 
+	 * @param source œcie¿ka pliku konfiguracyjnego
+	 * @param ifGen parametr okreœlaj¹cy jaka wielkoœæ jest aktualnie wczytywana
+	 * @return odpowiednio wielkoœæ planszy lub liczba generacji w zale¿noœci od parametru ifGen (dla ifGen=0 wielkoœæ planszy)
+	 */
 	public static int readParameters( File source, int ifGen ) {
 		int retNumber = 0;
 		int maxSize = 50;
@@ -53,7 +66,12 @@ public class InOut {
 		return retNumber;
 	}
 	
-	
+	/**
+	 * Metoda wczytuje obiekty oraz ich po³o¿enie z pliku konfiguracyjnego i umieszcza je na planszy.
+	 * 
+	 * @param config œcie¿ka pliku konfiguracyjnego
+	 * @param b tablica komórek
+	 */
 	public static void readObjects( File config, Board b, int ifBack ) {
 		
 		BoardObject obj = null;

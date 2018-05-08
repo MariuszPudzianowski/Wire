@@ -1,0 +1,5 @@
+size 49
+generations 40
+wire, 1, 27, 27, 27
+wire, 2, 27, 2, 27
+wire, 1, 27, 1, 27

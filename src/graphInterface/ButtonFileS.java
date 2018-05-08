@@ -8,12 +8,31 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Calendar;
 
+/**
+ * Klasa opisuje zachowanie i funkcjê przycisku Save gen.
+ * Przycisk po naciœniêciu pozwala wybraæ lokalizacjê, a po jej wybraniu zapisaæ w niej plik konfiguracyjny,
+ * który bêdzie zawiera³ bie¿¹c¹ generacjê.
+ * 
+ * @author Maciej Tarnowski, Marcin Krasuski
+ */
 public class ButtonFileS extends Button {
 
+	/**
+	 * Konstruktor tworzy przycisk Save gen. w po³o¿eniu okreœlonym wspó³rzêdnymi x i y.
+	 * 
+	 * @param x wspó³rzêdna x lewego górnego rogu przycisku
+	 * @param y wspó³rzêdna y lewego górnego rogu przycisku
+	 */
 	public ButtonFileS( int x, int y ) {
 		super( x, y, "Save gen." );
 	}
 	
+	/**
+	 * Metoda tworzy nazwê, pod jak¹ zostanie zapisany plik z generacj¹.
+	 * Nazwa opiera siê na aktualnej dacie i bie¿¹cym czasie.
+	 * 
+	 * @return nazwa pliku z konfiguracj¹
+	 */
 	private String fileName () {
 		String year = Integer.toString( Calendar.getInstance().get(Calendar.YEAR) );
 		String month = Integer.toString(Calendar.getInstance().get(Calendar.MONTH)+1 );
@@ -25,6 +44,11 @@ public class ButtonFileS extends Button {
 		return( year + "_" + month + "_" + day + "_" + hour + "_" + minute + "_" + sec + "_" + ms );
 	}
 	
+	/**
+	 * Metoda generuje plik konfiguracyjny i zapisuje go w wybranej lokalizacji.
+	 * 
+	 * @param b tablica komórek
+	 */
 	public void save ( Wire.Board b ) {
 		try {
 			BufferedReader readBoard = new BufferedReader( new FileReader( b.source ) );

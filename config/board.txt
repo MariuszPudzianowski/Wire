@@ -1,4 +1,5 @@
 size 49
 generations 40
-xorgate, 0, 6, up
-wire, 1, 1, 27, 27
+wire, 1, 27, 27, 27
+electrhead, 2, 27
+electrtail, 1, 27
