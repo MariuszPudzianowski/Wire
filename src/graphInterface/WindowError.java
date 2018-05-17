@@ -3,8 +3,8 @@ package graphInterface;
 import javax.swing.*;
 
 /**
- * Klasa jest implementacj¹ okna z komunikatem o b³êdzie.
- * 
+ * Klasa jest implementacjÂ¹ okna z komunikatem o bÂ³Ãªdzie.
+ *
  * @author Maciej Tarnowski, Marcin Krasuski
  */
 public class WindowError extends JFrame {
@@ -13,10 +13,10 @@ public class WindowError extends JFrame {
 	private final int width = 400;
 	
 	/**
-	 * Konstruktor tworzy nowe okno z okreœlonym komunikatem o b³êdzie.
-	 * Pos³uguje siê w tym celu metodami klasy JFrame.
+	 * Konstruktor tworzy nowe okno z okreÅ“lonym komunikatem o bÂ³Ãªdzie.
+	 * PosÂ³uguje siÃª w tym celu metodami klasy JFrame.
 	 * 
-	 * @param text treœæ komunikatu
+	 * @param text treÅ“Ã¦ komunikatu
 	 */
 	public WindowError ( String text ) {
 		super( "Error" );
