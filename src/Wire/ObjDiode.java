@@ -3,7 +3,7 @@ package Wire;
 import graphInterface.WindowError;
 
 /**
- * Klasa reprezentuje obiekt - diodê.
+ * Klasa reprezentuje obiekt - diodÃª.
  * 
  * @author Maciej Tarnowski, Marcin Krasuski
  */
@@ -14,9 +14,9 @@ public class ObjDiode implements BoardObject {
 	
 	/**
 	 * Konstruktor ustala parametry diody.
-	 * 
-	 * @param h wspó³rzêdna y
-	 * @param w wspó³rzêdna x
+	 *
+	 * @param h wspÃ³Â³rzÃªdna y
+	 * @param w wspÃ³Â³rzÃªdna x
 	 * @param direction kierunek obiektu
 	 */
 	public ObjDiode( int h, int w, String direction ) {
@@ -27,8 +27,8 @@ public class ObjDiode implements BoardObject {
 	}
 	
 	/**
-	 * Metoda umieszcza diodê na planszy.
-	 * Je¿eli obiekt wychodzi poza planszê, wyœwietlany jest komunikat o b³êdzie.
+	 * Metoda umieszcza diodÃª na planszy.
+	 * JeÂ¿eli obiekt wychodzi poza planszÃª, wyÅ“wietlany jest komunikat o bÂ³Ãªdzie.
 	 */
 	@Override
 	public void addToBoard( Board b, int ifBack ) {
