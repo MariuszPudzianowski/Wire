@@ -3,16 +3,16 @@ package Wire;
 import java.io.File;
 
 /**
- * Klasa reprezentujaca tablicê komórek.
- * Zawiera metody operujace na tablicy i wartoœciach jej pól.
+ * Klasa reprezentujaca tablicÄ™ komÃ³rek.
+ * Zawiera metody operujace na tablicy i wartoÅ›ciach jej pÃ³l.
  * 
  * @author Maciej Tarnowski, Marcin Krasuski
  */
 public class Board {
 	
 	/**
-	 * Klasa reprezentuj¹ca komórkê.
-	 * Zawiera metody operuj¹ce na wartoœciach komórek.
+	 * Klasa reprezentujÄ…ca komÃ³rkÄ™.
+	 * Zawiera metody operujÄ…ce na wartoÅ›ciach komÃ³rek.
 	 * 
 	 * @author Maciej Tarnowski, Marcin Krasuski
 	 */
@@ -21,29 +21,29 @@ public class Board {
 		private int value = 0;
 		
 		/**
-		 * Metoda przypisuje wartoœæ komórce.
+		 * Metoda przypisuje wartoÅ›Ä‡ komÃ³rce.
 		 * 
-		 * @param value wartoœæ do przypisania
+		 * @param value wartoÅ›Ä‡ do przypisania
 		 */
 		public void setValue( int value ) {
 			this.value = value;
 		}
 		
 		/**
-		 * Metoda zwraca wartoœæ komórki.
+		 * Metoda zwraca wartoÅ›Ä‡ komÃ³rki.
 		 * 
-		 * @return wartoœæ komórki
+		 * @return wartoÅ›Ä‡ komÃ³rki
 		 */
 		public int getValue() {
 			return value;
 		}
 		
 		/**
-		 * Metoda bada wartoœci s¹siaduj¹cych komórek w celu okreœlenia liczby s¹siaduj¹cych z dan¹ komórk¹ g³ów elektronu.
+		 * Metoda bada wartoÅ›ci sÄ…siadujÄ…cych komÃ³rek w celu okreÅ›lenia liczby sÄ…siadujÄ…cych z danÄ… komÃ³rkÄ… gÅ‚Ã³w elektronu.
 		 * 
-		 * @param h wspó³rzêdna y
-		 * @param w wspó³rzêdna x
-		 * @return liczba g³ów elektronu
+		 * @param h wspÃ³Å‚rzÄ™dna y
+		 * @param w wspÃ³Å‚rzÄ™dna x
+		 * @return liczba gÅ‚Ã³w elektronu
 		 */
 		private int checkNeighbours( int h, int w ) {
 			int neighbours = 0;
@@ -81,11 +81,11 @@ public class Board {
 		}
 		
 		/**
-		 * Metoda przypisuje komórce now¹ wartoœæ badaj¹c stan planszy z poprzedniej generacji i odnosz¹c go do zasad WireWorld.
+		 * Metoda przypisuje komÃ³rce nowÄ… wartoÅ›Ä‡ badajÄ…c stan planszy z poprzedniej generacji i odnoszÄ…c go do zasad WireWorld.
 		 * 
-		 * @param h wspó³rzêdna y
-		 * @param w wspó³rzêdna x
-		 * @return nowa wartoœæ komórki
+		 * @param h wspÃ³Å‚rzÄ™dna y
+		 * @param w wspÃ³Å‚rzÄ™dna x
+		 * @return nowa wartoÅ›Ä‡ komÃ³rki
 		 */
 		public int newValue( int h, int w ) {
 			if( value == 1) {
@@ -112,12 +112,12 @@ public class Board {
 	private Cell cells[][];
 	
 	/**
-	 * Konstruktor tworzy tablicê komórek.
-	 * Rozmiary planszy i liczba generacji zale¿¹ od danych podanych w pliku konfiguracyjnym.
-	 * 
-	 * @param size wielkoœæ planszy (plansza bêdzie mia³a rozmiar (size x size)
+	 * Konstruktor tworzy tablicÄ™ komÃ³rek.
+	 * Rozmiary planszy i liczba generacji zaleÅ¼Ä… od danych podanych w pliku konfiguracyjnym.
+	 *
+	 * @param size wielkoÅ›Ä‡ planszy (plansza bÄ™dzie miaÅ‚a rozmiar (size x size)
 	 * @param gen liczba generacji
-	 * @param source œcie¿ka pliku konfiguracyjnego
+	 * @param source Å›cieÅ¼ka pliku konfiguracyjnego
 	 */
 	public Board( int size, int gen, File source ) {
 		this.size = size;
@@ -131,27 +131,27 @@ public class Board {
 		}
 	
 	/**
-	 * Metoda okreœla wielkoœæ tablicy.
+	 * Metoda okreÅ›la wielkoÅ›Ä‡ tablicy.
 	 * 
-	 * @return wielkoœæ tablicy
+	 * @return wielkoÅ›Ä‡ tablicy
 	 */
 	public int getSize() {
 		return size;
 	}
 	
 	/**
-	 * Metoda zwraca komórkê o danym po³o¿eniu w tablicy.
+	 * Metoda zwraca komÃ³rkÄ™ o danym poÅ‚oÅ¼eniu w tablicy.
 	 * 
-	 * @param i rz¹d tablicy (rozpoczynaj¹c od 0)
-	 * @param j kolumna tablicy (rozpoczynaj¹c od 0)
-	 * @return szukana komórka
+	 * @param i rzÄ…d tablicy (rozpoczynajÄ…c od 0)
+	 * @param j kolumna tablicy (rozpoczynajÄ…c od 0)
+	 * @return szukana komÃ³rka
 	 */
 	public Cell getCell( int i, int j ) {
 		return cells[i][j];
 	}
 	
 	/**
-	 * Metoda wype³nia tablicê nowymi wartoœciami zgodnie z zasadami tworzenia nowej generacji.
+	 * Metoda wypeÅ‚nia tablicÄ™ nowymi wartoÅ›ciami zgodnie z zasadami tworzenia nowej generacji.
 	 */
 	public void nextGen() {
 		Board newBoard = new Board( this.size, this.gen, this.source );
