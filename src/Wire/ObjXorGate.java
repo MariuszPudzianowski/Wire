@@ -4,7 +4,7 @@ import graphInterface.WindowError;
 
 /**
  * Klasa reprezentuje obiekt - bramkê XOR.
- *
+ * 
  * @author Maciej Tarnowski, Marcin Krasuski
  */
 public class ObjXorGate implements BoardObject {
