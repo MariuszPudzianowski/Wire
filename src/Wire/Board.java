@@ -141,7 +141,7 @@ public class Board {
 	
 	/**
 	 * Metoda zwraca komórkę o danym położeniu w tablicy.
-	 * 
+	 *
 	 * @param i rząd tablicy (rozpoczynając od 0)
 	 * @param j kolumna tablicy (rozpoczynając od 0)
 	 * @return szukana komórka
