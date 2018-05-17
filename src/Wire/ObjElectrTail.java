@@ -4,7 +4,7 @@ import graphInterface.WindowError;
 
 /**
  * Klasa reprezentuje obiekt - ogon elektronu.
- * 
+ *
  * @author Maciej Tarnowski, Marcin Krasuski
  */
 public class ObjElectrTail implements BoardObject {
@@ -14,8 +14,8 @@ public class ObjElectrTail implements BoardObject {
 	/**
 	 * Konstruktor ustala parametry ogona elektronu.
 	 * 
-	 * @param h wspó³rzêdna y
-	 * @param w wspó³rzêdna x
+	 * @param h wspÃ³Å‚rzÄ™dna y
+	 * @param w wspÃ³Å‚rzÄ™dna x
 	 */
 	public ObjElectrTail( int h, int w ) {
 		this.h = h;
@@ -24,7 +24,7 @@ public class ObjElectrTail implements BoardObject {
 
 	/**
 	 * Metoda umieszcza ogon elektronu na planszy.
-	 * Je¿eli obiekt wychodzi poza planszê, wyœwietlany jest komunikat o b³êdzie.
+	 * JeÅ¼eli obiekt wychodzi poza planszÄ™, wyÅ›wietlany jest komunikat o bÅ‚Ä™dzie.
 	 */
 	@Override
 	public void addToBoard( Board b, int ifBack ) {
