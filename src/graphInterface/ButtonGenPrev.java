@@ -1,6 +1,6 @@
 package graphInterface;
 
-import Wire.InOut;
+import Wire.*;
 
 /**
  * Klasa opisuje zachowanie i funkcjê przycisku Gen -1.
@@ -27,7 +27,7 @@ public class ButtonGenPrev extends Button {
 	 * @param g bie¿¹ca generacja
 	 */
 	public void prev ( PanelBoard p, int g ) {
-		Wire.Board newBoard = new Wire.Board( p.b.getSize(), Wire.InOut.readParameters( p.b.source, 1 ), p.b.source );
+		Board newBoard = new Board( p.b.getSize(), InOut.readParameters( p.b.source, 1 ), p.b.source );
 		InOut.readObjects( p.b.source, newBoard, 1 );
 
 		p.b = newBoard;

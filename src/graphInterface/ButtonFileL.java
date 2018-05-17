@@ -1,12 +1,12 @@
 package graphInterface;
 
-import javax.swing.JFileChooser;
 import Wire.InOut;
+import javax.swing.JFileChooser;
 import java.io.File;
 
 /**
  * Klasa opisuje zachowanie i funkcjê przycisku Load gen.
- * Przycisk po naciœniêciu pozwala wybraæ lokalizacjê pliku, po czym czyta z niego generacjê traktuj¹c go jak plik konfiguracyjny.
+ * Przycisk po naciœniêciu pozwala wybraæ lokalizacjê pliku, po czym wczytuje z niego generacjê traktuj¹c go jak plik konfiguracyjny.
  * 
  * @author Maciej Tarnowski, Marcin Krasuski
  */
@@ -35,15 +35,15 @@ public class ButtonFileL extends Button {
 		    File selectedFile = fileChooser.getSelectedFile();
 		    
 		    if( selectedFile.getName().endsWith(".txt") ) {
-		    	p.board.b = new Wire.Board( Wire.InOut.readParameters( selectedFile, 0 ), Wire.InOut.readParameters( selectedFile, 1 ), selectedFile );
+		    	p.panelBoard.b = new Wire.Board( InOut.readParameters( selectedFile, 0 ), InOut.readParameters( selectedFile, 1 ), selectedFile );
 		
-				if( p.board.b.getSize() != 0 && p.board.b.gen != 0 ) {
-					InOut.readObjects( selectedFile, p.board.b, 0 );
-					p.board.repaint();
+				if( p.panelBoard.b.getSize() != 0 && p.panelBoard.b.gen != 0 ) {
+					InOut.readObjects( selectedFile, p.panelBoard.b, 0 );
+					p.panelBoard.repaint();
 				}
 		    }
 			else
-				new WindowError( "The file is not .txt file." );
+				new WindowError( "The file is not a '.txt' file." );
 		}
 	}
 	

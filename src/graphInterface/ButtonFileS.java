@@ -1,11 +1,7 @@
 package graphInterface;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.PrintWriter;
+import Wire.Board;
+import java.io.*;
 import java.util.Calendar;
 
 /**
@@ -49,7 +45,7 @@ public class ButtonFileS extends Button {
 	 * 
 	 * @param b tablica komórek
 	 */
-	public void save ( Wire.Board b ) {
+	public void save ( Board b ) {
 		try {
 			BufferedReader readBoard = new BufferedReader( new FileReader( b.source ) );
 			
