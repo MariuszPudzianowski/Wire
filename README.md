@@ -1,11 +1,11 @@
 # Wire
 Maciej Tarnowski, Marcin Krasuski
 
-(PL) Aplikacja bêd¹ca implementacj¹ automatu komórkowego WireWorld. Zasada dzia³ania automatu i funkcjonalnoœæ aplikacji opisane s¹ w Specyfikacji.
+(PL) Aplikacja będąca implementacją automatu komórkowego WireWorld. Zasada działania automatu i funkcjonalność aplikacji opisane są w Specyfikacji.
 
 Dla szybkiego pokazu uruchom aplikację, kliknij przycisk "Load conf." i naciśnij "START", aby rozpocząć domyślną symulację.
 
-Kod aplikacji jest funkcjonalny, lecz s³abej jakoœci. Dzisiaj oczywiœcie napisalibyœmy go inaczej, ale nie jest on warty refaktoryzacji (baza w zasadzie musia³aby byæ napisana od nowa). Mimo to dodanie nowych rodzajów obiektów czy prostych funkcjonalnoœci jest stosunkowo proste.
+Kod aplikacji jest funkcjonalny, lecz słabej jakości. Dzisiaj oczywiście napisalibyśmy go inaczej, ale nie jest on warty refaktoryzacji (baza w zasadzie musiałaby być napisana od nowa). Mimo to dodanie nowych rodzajów obiektów czy prostych funkcjonalności jest stosunkowo proste.
 
 =======================================
 
