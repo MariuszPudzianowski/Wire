@@ -12,7 +12,7 @@ function show(type)
     }
     updateTabs(type);
 }
- 
+
 function updateTabs(type)
 {
     for (var value in tabs) {
