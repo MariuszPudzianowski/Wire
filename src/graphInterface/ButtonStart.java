@@ -9,7 +9,7 @@ package graphInterface;
  */
 public class ButtonStart extends Button implements Runnable {
 	
-	Panel p;
+	private Panel p;
 	
 	/**
 	 * Konstruktor tworzy przycisk START w po³o¿eniu okreœlonym wspó³rzêdnymi x i y.
@@ -44,7 +44,7 @@ public class ButtonStart extends Button implements Runnable {
 	 */
 	@Override
 	public void run() {
-		while (p.g < p.board.b.gen) {
+		while (p.g < p.panelBoard.b.gen) {
 			while (p.isPaused == true) {
 				synchronized (this) {
 					try {
@@ -54,11 +54,11 @@ public class ButtonStart extends Button implements Runnable {
 					}
 				}
 			}
-			p.board.b.nextGen();
-			p.board.repaint();
+			p.panelBoard.b.nextGen();
+			p.panelBoard.repaint();
 			p.g++;
 			try {
-				Thread.sleep(500);
+				Thread.sleep(300);
 			} catch (InterruptedException e) {
 				// DO NOTHING
 			}

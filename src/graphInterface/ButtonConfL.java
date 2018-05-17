@@ -1,6 +1,6 @@
 package graphInterface;
 
-import Wire.InOut;
+import Wire.*;
 import java.io.File;
 
 /**
@@ -31,11 +31,11 @@ public class ButtonConfL extends Button {
 		
 		File config = new File( "config/board.txt" );
 	
-		p.board.b = new Wire.Board( Wire.InOut.readParameters( config, 0 ), Wire.InOut.readParameters( config, 1 ), config );
+		p.panelBoard.b = new Board( InOut.readParameters( config, 0 ), InOut.readParameters( config, 1 ), config );
 		
-		if( p.board.b.getSize() != 0 && p.board.b.gen != 0 ) {
-			InOut.readObjects( config, p.board.b, 0 );
-			p.board.repaint();
+		if( p.panelBoard.b.getSize() != 0 && p.panelBoard.b.gen != 0 ) {
+			InOut.readObjects( config, p.panelBoard.b, 0 );
+			p.panelBoard.repaint();
 		}
 			
 		

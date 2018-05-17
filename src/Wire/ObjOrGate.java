@@ -45,8 +45,6 @@ public class ObjOrGate implements BoardObject {
 				
 				b.getCell( h, w+2*step ).setValue( 1 );
 				
-				b.getCell( h, w+3*step ).setValue( 1 );
-				
 			} else {
 				b.getCell( h, w ).setValue( 1 );
 				b.getCell( h, w-2 ).setValue( 1 );
@@ -57,8 +55,6 @@ public class ObjOrGate implements BoardObject {
 				b.getCell( h+step, w+1 ).setValue( 1 );
 				
 				b.getCell( h+2*step, w ).setValue( 1 );
-				
-				b.getCell( h+3*step, w ).setValue( 1 );
 			}
 		} catch( ArrayIndexOutOfBoundsException e ) {
 			if( ifBack == 0 )

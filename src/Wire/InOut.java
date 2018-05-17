@@ -16,7 +16,7 @@ import graphInterface.WindowError;
 public class InOut {
 
 	/**
-	 * Metoda czyta parametry wielkoœci planszy i liczby generacji z pliku konfiguracyjnego o okreœlonej œcie¿ce.
+	 * Metoda wczytuje parametry dotycz¹ce wielkoœci planszy i liczby generacji z pliku konfiguracyjnego o okreœlonej œcie¿ce.
 	 * Plik konfiguracyjny powinien byæ zapisany w folderze "config" pod nazw¹ "board.txt".
 	 * 
 	 * @param source œcie¿ka pliku konfiguracyjnego
@@ -26,7 +26,7 @@ public class InOut {
 	public static int readParameters( File source, int ifGen ) {
 		int retNumber = 0;
 		int maxSize = 50;
-		int maxGen = 100;
+		int maxGen = 200;
 		
 		try {
 			BufferedReader readBoard = new BufferedReader( new FileReader( source ) );
@@ -43,18 +43,19 @@ public class InOut {
 					
 					int compare = (ifGen==0) ? maxSize : maxGen;
 					if( retNumber <= 0 || retNumber > compare ) {
-						new WindowError( "<html>Source file: Board size cannot be less than 1 and more than " + maxSize + "<br>\nNumber of gens cannot be less than 1 and more than " + maxGen + "</html>" );
+						new WindowError( "<html>Source file: The board size cannot be less than 1 or more than " + maxSize +
+								"<br>\nThe number of generations cannot be less than 1 or more than " + maxGen + "</html>" );
 						readBoard = new BufferedReader( new FileReader( source ) );
 						return 0;
 					}
 				} catch( NumberFormatException e ) {
-					new WindowError( "Source file: The number given is not int." );
+					new WindowError( "Source file: The number given is not an integer." );
 				} catch( ArrayIndexOutOfBoundsException e ) {
 					new WindowError( "Source file: No data given." );
 				}
 			} catch( NullPointerException e ){
 				if( ifGen == 0)
-					new WindowError( "Source file: No data in file." );
+					new WindowError( "Source file: No data in the file." );
 			} catch( IOException e ) {
 				new WindowError( "Source file: IOException" );
 			}
@@ -136,7 +137,7 @@ public class InOut {
 						
 					} catch( NumberFormatException e ) {
 						if( ifBack == 0 )
-							new WindowError( "<html>Source file: The number given is not int.<br>" + line + "</html>" );
+							new WindowError( "<html>Source file: The number given is not an integer.<br>" + line + "</html>" );
 					} catch( ArrayIndexOutOfBoundsException e ) {
 						if( ifBack == 0 )
 							new WindowError( "<html>Source file: No data given.<br>" + line + "</html>" );

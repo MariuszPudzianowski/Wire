@@ -28,7 +28,7 @@ public class Window extends JFrame {
 		Panel buttons = new Panel( this, new PanelBoard() );
 		
 		add( buttons );
-		add( buttons.board );
+		add( buttons.panelBoard );
 		
 		setVisible( true );
 		

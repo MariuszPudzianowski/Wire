@@ -1,5 +1,6 @@
 package graphInterface;
 
+import Wire.Board;
 import java.awt.*;
 import java.awt.geom.*;
 import javax.swing.JLayeredPane;
@@ -12,10 +13,10 @@ import javax.swing.JLayeredPane;
  */
 public class PanelBoard extends JLayeredPane {
 	
-	public Wire.Board b;
+	public Board b;
 	
 	/**
-	 * Metoda pokrywa wszystkie kwadraty obszary planszy zgodnie z aktualnym jej stanem.
+	 * Metoda pokrywa wszystkie kwadraty obszaru planszy zgodnie z jej aktualnym stanem.
 	 * Korzysta w tym celu z paczki java.awt oraz metod klasy javax.Swing.JLayeredPane.
 	 */
 	@Override

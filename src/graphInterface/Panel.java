@@ -12,7 +12,7 @@ import javax.swing.JPanel;
  */
 public class Panel extends JPanel implements ActionListener {
 	
-	PanelBoard board;
+	PanelBoard panelBoard;
 	Button start, stop, genNext, genPrev, fileS, fileL, confO, confL;
 	int g;
 	boolean isRunning = false;
@@ -26,8 +26,8 @@ public class Panel extends JPanel implements ActionListener {
 	 * @param pane kontener przechowuj¹cy przyciski
 	 * @param board zape³niany obszar planszy
 	 */
-	public Panel( Container pane, PanelBoard board ) {
-		this.board = board;
+	public Panel( Container pane, PanelBoard panelBoard ) {
+		this.panelBoard = panelBoard;
  
         start = new ButtonStart( 20, 500 );
         start.setEnabled( false );
@@ -78,34 +78,36 @@ public class Panel extends JPanel implements ActionListener {
 			( (ButtonConfO) source ).open();
 		} else if ( source instanceof ButtonConfL ) {
 			( (ButtonConfL) source ).load( this );
-			if ( board.b != null ) {
+			if ( panelBoard.b != null ) {
 				g = 1;
 				isPaused = true;
 				start.setEnabled( true );
 				genNext.setEnabled( true );
+				genPrev.setEnabled( false );
 				fileS.setEnabled( true );
 			}
 		} else if ( source instanceof ButtonFileL ) {
 			( (ButtonFileL) source ).load( this );
-			if ( board.b != null ) {
+			if ( panelBoard.b != null ) {
 				g = 1;
 				isPaused = true;
 				start.setEnabled( true );
 				genNext.setEnabled( true );
+				genPrev.setEnabled( false );
 				fileS.setEnabled( true );
 			}
 		} else if ( source instanceof ButtonFileS ) {
-			( (ButtonFileS) source ).save( board.b );
+			( (ButtonFileS) source ).save( panelBoard.b );
 		} else if ( source instanceof ButtonGenNext ) {
-			( (ButtonGenNext) source ).next( board );
+			( (ButtonGenNext) source ).next( panelBoard );
 			g++;
 			genPrev.setEnabled( true );
-			if (g == board.b.gen) {
+			if (g == panelBoard.b.gen) {
 				genNext.setEnabled( false );
 				start.setEnabled( false );
 			}
 		} else if ( source instanceof ButtonGenPrev ) {
-			( (ButtonGenPrev) source ).prev( board, g );
+			( (ButtonGenPrev) source ).prev( panelBoard, g );
 			g--;
 			genNext.setEnabled( true );
 			start.setEnabled( true );
@@ -135,14 +137,14 @@ public class Panel extends JPanel implements ActionListener {
 			else
 				genPrev.setEnabled( true );
 			
-			if (g == board.b.gen)
+			if (g == panelBoard.b.gen)
 				genNext.setEnabled( false );
 			else
 				genNext.setEnabled( true );
 		}
 		
-		if( board.b != null) {
-			if (isRunning == false && g != board.b.gen)
+		if( panelBoard.b != null) {
+			if (isRunning == false && g != panelBoard.b.gen)
 				start.setEnabled( true );
 		}
 	}

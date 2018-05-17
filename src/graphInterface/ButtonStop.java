@@ -8,8 +8,6 @@ package graphInterface;
  */
 public class ButtonStop extends Button {
 	
-	Panel p;
-	
 	/**
 	 * Konstruktor tworzy przycisk STOP w po³o¿eniu okreœlonym wspó³rzêdnymi x i y.
 	 * 
@@ -26,7 +24,6 @@ public class ButtonStop extends Button {
 	 * @param p panel z przyciskami i obszarem planszy
 	 */
 	public void stop (Panel p) {
-		this.p = p;
 		p.isPaused = true;
 	}
 	
