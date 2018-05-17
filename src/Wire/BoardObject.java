@@ -1,15 +1,15 @@
 package Wire;
 
 /**
- * Interfejs okreúlajπcy dodawanie obiektu jako zachowanie wspÛlne dla kaødego z nich.
+ * Interfejs okre≈õlajƒÖcy dodawanie obiektu jako zachowanie wsp√≥lne dla ka≈ºdego z nich.
  * 
  * @author Maciej Tarnowski, Marcin Krasuski
  */
 public interface BoardObject {
 	
 	/**
-	 * Metoda dodaje obiekt okreúlony w pliku konfiguracyjnym do tablicy.
-	 * 
+	 * Metoda dodaje obiekt okre≈õlony w pliku konfiguracyjnym do tablicy.
+	 *
 	 * @param b tablica
 	 * @param ifBack
 	 */
