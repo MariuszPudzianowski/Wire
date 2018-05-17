@@ -3,7 +3,7 @@ package Wire;
 import graphInterface.WindowError;
 
 /**
- * Klasa reprezentuje obiekt - g³owê elektronu.
+ * Klasa reprezentuje obiekt - gÅ‚owÄ™ elektronu.
  * 
  * @author Maciej Tarnowski, Marcin Krasuski
  */
@@ -12,10 +12,10 @@ public class ObjElectrHead implements BoardObject {
 	private int h, w;
 	
 	/**
-	 * Konstruktor ustala parametry g³owy elektronu.
-	 * 
-	 * @param h wspó³rzêdna y
-	 * @param w wspó³rzêdna x
+	 * Konstruktor ustala parametry gÅ‚owy elektronu.
+	 *
+	 * @param h wspÃ³Å‚rzÄ™dna y
+	 * @param w wspÃ³Å‚rzÄ™dna x
 	 */
 	public ObjElectrHead( int h, int w ) {
 		this.h = h;
@@ -23,8 +23,8 @@ public class ObjElectrHead implements BoardObject {
 	}
 
 	/**
-	 * Metoda umieszcza g³owê elektronu na planszy.
-	 * Je¿eli obiekt wychodzi poza planszê, wyœwietlany jest komunikat o b³êdzie.
+	 * Metoda umieszcza gÅ‚owÄ™ elektronu na planszy.
+	 * JeÅ¼eli obiekt wychodzi poza planszÄ™, wyÅ›wietlany jest komunikat o bÅ‚Ä™dzie.
 	 */
 	@Override
 	public void addToBoard( Board b, int ifBack ) {
