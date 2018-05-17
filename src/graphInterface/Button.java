@@ -3,9 +3,9 @@ package graphInterface;
 import javax.swing.JButton;
 
 /**
- * Klasa reprezentuje przycisk znajduj¹cy siê na panelu.
- * Przycisk ma okreœlon¹ wysokoœæ (50) i szerokoœæ (100).
- * 
+ * Klasa reprezentuje przycisk znajdujÄ…cy siÄ™ na panelu.
+ * Przycisk ma okreÅ›lonÄ… wysokoÅ›Ä‡ (50) i szerokoÅ›Ä‡ (100).
+ *
  * @author Maciej Tarnowski, Marcin Krasuski
  */
 public class Button extends JButton {
@@ -13,11 +13,11 @@ public class Button extends JButton {
 	private final int height = 50;
 	
 	/**
-	 * Konstruktor tworzy przycisk o sta³ych wymiarach, w po³o¿eniu okreœlonym wspó³rzêdnymi x i y oraz o podanej nazwie.
-	 * U¿ywa do tego metod klasy javax.swing.JButton.
+	 * Konstruktor tworzy przycisk o staÅ‚ych wymiarach, w poÅ‚oÅ¼eniu okreÅ›lonym wspÃ³Å‚rzÄ™dnymi x i y oraz o podanej nazwie.
+	 * UÅ¼ywa do tego metod klasy javax.swing.JButton.
 	 * 
-	 * @param x wspó³rzêdna x lewego górnego rogu przycisku
-	 * @param y wspó³rzêdna y lewego górnego rogu przycisku
+	 * @param x wspÃ³Å‚rzÄ™dna x lewego gÃ³rnego rogu przycisku
+	 * @param y wspÃ³Å‚rzÄ™dna y lewego gÃ³rnego rogu przycisku
 	 * @param name nazwa przycisku reprezentowana przez tekst na przycisku
 	 */
 	public Button( int x, int y, String name ) {
