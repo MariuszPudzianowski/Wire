@@ -13,7 +13,7 @@ public class ObjElectrHead implements BoardObject {
 	
 	/**
 	 * Konstruktor ustala parametry głowy elektronu.
-	 *
+	 * 
 	 * @param h współrzędna y
 	 * @param w współrzędna x
 	 */
