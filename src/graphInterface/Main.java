@@ -3,7 +3,7 @@ package graphInterface;
 import java.awt.EventQueue;
 
 /**
- * Klasa g³ówna paczki graphInterface zawieraj¹ca metodê main().a
+ * Klasa g³ówna paczki graphInterface zawieraj¹ca metodê main().
  *
  * @author Maciej Tarnowski, Marcin Krasuski
  */

@@ -1,7 +1,7 @@
 package graphInterface;
 
 /**
- * Klasa opisuje zachowanie i funkcjê przycisku START.a
+ * Klasa opisuje zachowanie i funkcjê przycisku START.
  * Przycisk po naciœniêciu tworzy kolejne generacje a¿ do ostatniej generacji lub do naciœniêcia
  * przycisku STOP.
  * 

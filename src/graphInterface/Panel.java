@@ -6,7 +6,7 @@ import java.awt.event.ActionListener;
 import javax.swing.JPanel;
 
 /**
- * Klasa reprezentuje interaktywny obszar okna sk³adaj¹cy siê z obszaru wyœwietlanej generacji oraz przycisków do jego obs³ugi.a
+ * Klasa reprezentuje interaktywny obszar okna sk³adaj¹cy siê z obszaru wyœwietlanej generacji oraz przycisków do jego obs³ugi.
  * 
  * @author Maciej Tarnowski, Marcin Krasuski
  */
@@ -24,7 +24,7 @@ public class Panel extends JPanel implements ActionListener {
 	 * który zawsze po uruchomieniu jest pusty.
 	 * 
 	 * @param pane kontener przechowuj¹cy przyciski
-	 * @param board zape³niany obszar planszy
+	 * @param panelBoard zape³niany obszar planszy
 	 */
 	public Panel( Container pane, PanelBoard panelBoard ) {
 		this.panelBoard = panelBoard;

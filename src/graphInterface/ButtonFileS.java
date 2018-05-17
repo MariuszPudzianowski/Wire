@@ -5,7 +5,7 @@ import java.io.*;
 import java.util.Calendar;
 
 /**
- * Klasa opisuje zachowanie i funkcjê przycisku Save gen.a
+ * Klasa opisuje zachowanie i funkcjê przycisku Save gen.
  * Przycisk po naciœniêciu pozwala wybraæ lokalizacjê, a po jej wybraniu zapisaæ w niej plik konfiguracyjny,
  * który bêdzie zawiera³ bie¿¹c¹ generacjê.
  * 

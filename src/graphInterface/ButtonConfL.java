@@ -4,7 +4,7 @@ import Wire.*;
 import java.io.File;
 
 /**
- * Klasa opisuje zachowanie i funkcjê przycisku Load conf. a
+ * Klasa opisuje zachowanie i funkcjê przycisku Load conf.
  * Przycisk po naciœniêciu wczytuje generacjê z pliku konfiguracyjnego zapisanego pod sta³¹ œcie¿k¹.
  * Plik konfiguracyjny powinien byæ zapisany w folderze "config" pod nazw¹ "board.txt"
  * 

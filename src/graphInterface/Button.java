@@ -3,7 +3,7 @@ package graphInterface;
 import javax.swing.JButton;
 
 /**
- * Klasa reprezentuje przycisk znajdujący się na panelu. A
+ * Klasa reprezentuje przycisk znajdujący się na panelu.
  * Przycisk ma określoną wysokość (50) i szerokość (100).
  *
  * @author Maciej Tarnowski, Marcin Krasuski

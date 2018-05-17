@@ -6,7 +6,7 @@ import java.awt.geom.*;
 import javax.swing.JLayeredPane;
 
 /**
- * Klasa reprezentuje obszar planszy z³o¿ony z kwadratów.a
+ * Klasa reprezentuje obszar planszy z³o¿ony z kwadratów.
  * Ka¿dy kwadrat mo¿e byæ jednego z czterech kolorów (¿ó³ty, niebieski, czerwony lub bia³y).
  * 
  * @author Maciej Tarnowski, Marcin Krasuski
