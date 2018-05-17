@@ -3,8 +3,8 @@ package Wire;
 import graphInterface.WindowError;
 
 /**
- * Klasa reprezentuje obiekt - bramkê XOR.
- * 
+ * Klasa reprezentuje obiekt - bramkÃª XOR.
+ *
  * @author Maciej Tarnowski, Marcin Krasuski
  */
 public class ObjXorGate implements BoardObject {
@@ -15,8 +15,8 @@ public class ObjXorGate implements BoardObject {
 	/**
 	 * Konstruktor ustala parametry bramki.
 	 * 
-	 * @param h wspó³rzêdna y
-	 * @param w wspó³rzêdna x
+	 * @param h wspÃ³Â³rzÃªdna y
+	 * @param w wspÃ³Â³rzÃªdna x
 	 * @param direction kierunek obiektu
 	 */
 	public ObjXorGate( int h, int w, String direction ) {
@@ -27,8 +27,8 @@ public class ObjXorGate implements BoardObject {
 	}
 	
 	/**
-	 * Metoda umieszcza bramkê na planszy.
-	 * Je¿eli obiekt wychodzi poza planszê, wyœwietlany jest komunikat o b³êdzie.
+	 * Metoda umieszcza bramkÃª na planszy.
+	 * JeÂ¿eli obiekt wychodzi poza planszÃª, wyÅ“wietlany jest komunikat o bÂ³Ãªdzie.
 	 */
 	@Override
 	public void addToBoard( Board b, int ifBack ) {
