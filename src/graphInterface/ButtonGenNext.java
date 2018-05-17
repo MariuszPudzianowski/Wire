@@ -1,27 +1,27 @@
 package graphInterface;
 
 /**
- * Klasa opisuje zachowanie i funkcjê przycisku Gen +1.
- * Przycisk po naciœniêciu wyœwietla nastêpn¹ generacjê.
- * 
+ * Klasa opisuje zachowanie i funkcjÄ™ przycisku Gen +1.
+ * Przycisk po naciÅ›niÄ™ciu wyÅ›wietla nastÄ™pnÄ… generacjÄ™.
+ *
  * @author Maciej Tarnowski, Marcin Krasuski
  */
 public class ButtonGenNext extends Button {
 
 	/**
-	 * Konstruktor tworzy przycisk Gen +1 w po³o¿eniu okreœlonym wspó³rzêdnymi x i y.
+	 * Konstruktor tworzy przycisk Gen +1 w poÅ‚oÅ¼eniu okreÅ›lonym wspÃ³Å‚rzÄ™dnymi x i y.
 	 * 
-	 * @param x wspó³rzêdna x lewego górnego rogu przycisku
-	 * @param y wspó³rzêdna y lewego górnego rogu przycisku
+	 * @param x wspÃ³Å‚rzÄ™dna x lewego gÃ³rnego rogu przycisku
+	 * @param y wspÃ³Å‚rzÄ™dna y lewego gÃ³rnego rogu przycisku
 	 */
 	public ButtonGenNext( int x, int y ) {
 		super( x, y, "Gen +1" );
 	}
 	
 	/**
-	 * Metoda realizuje funkcjonalnoœæ przycisku Gen +1 (wyœwietla nastêpn¹ generacjê).
+	 * Metoda realizuje funkcjonalnoÅ›Ä‡ przycisku Gen +1 (wyÅ›wietla nastÄ™pnÄ… generacjÄ™).
 	 * 
-	 * @param p zape³niany obszar planszy
+	 * @param p zapeÅ‚niany obszar planszy
 	 */
 	public void next ( PanelBoard p ) {
 		p.b.nextGen();
