@@ -1,7 +1,7 @@
 package graphInterface;
 
 /**
- * Klasa opisuje zachowanie i funkcjê przycisku STOP.
+ * Klasa opisuje zachowanie i funkcjê przycisku STOP.a
  * Przycisk po naciœniêciu zatrzymuje tworzenie kolejnych generacji na skutek uprzedniego naciœniêcia przycisku START.
  * 
  * @author Maciej Tarnowski, Marcin Krasuski

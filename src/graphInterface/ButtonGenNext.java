@@ -1,7 +1,7 @@
 package graphInterface;
 
 /**
- * Klasa opisuje zachowanie i funkcję przycisku Gen +1.
+ * Klasa opisuje zachowanie i funkcję przycisku Gen +1.a
  * Przycisk po naciśnięciu wyświetla następną generację.
  *
  * @author Maciej Tarnowski, Marcin Krasuski

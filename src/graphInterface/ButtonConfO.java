@@ -5,7 +5,7 @@ import java.io.File;
 import java.io.IOException;
 
 /**
- * Klasa opisuje zachowanie i funkcję przycisku Open conf.
+ * Klasa opisuje zachowanie i funkcję przycisku Open conf.a
  * Przycisk po naciśnięciu otwiera plik konfiguracyjny zapisany pod stałą ścieżką.
  * Plik konfiguracyjny powinien być zapisany w folderze "config" pod nazwą "board.txt"
  * 

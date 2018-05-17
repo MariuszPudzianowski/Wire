@@ -5,7 +5,7 @@ import javax.swing.JFileChooser;
 import java.io.File;
 
 /**
- * Klasa opisuje zachowanie i funkcjê przycisku Load gen.
+ * Klasa opisuje zachowanie i funkcjê przycisku Load gen.a
  * Przycisk po naciœniêciu pozwala wybraæ lokalizacjê pliku, po czym wczytuje z niego generacjê traktuj¹c go jak plik konfiguracyjny.
  * 
  * @author Maciej Tarnowski, Marcin Krasuski

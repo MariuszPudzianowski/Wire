@@ -6,7 +6,7 @@ import java.awt.event.ActionListener;
 import javax.swing.JPanel;
 
 /**
- * Klasa reprezentuje interaktywny obszar okna sk³adaj¹cy siê z obszaru wyœwietlanej generacji oraz przycisków do jego obs³ugi.
+ * Klasa reprezentuje interaktywny obszar okna sk³adaj¹cy siê z obszaru wyœwietlanej generacji oraz przycisków do jego obs³ugi.a
  * 
  * @author Maciej Tarnowski, Marcin Krasuski
  */

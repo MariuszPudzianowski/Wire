@@ -3,7 +3,7 @@ package graphInterface;
 import javax.swing.JFrame;
 
 /**
- * Klasa reprezentuje okno, w którym otwierana jest aplikacja.
+ * Klasa reprezentuje okno, w którym otwierana jest aplikacja.a
  * Okno ma okreœlon¹ wysokoœæ (670) i szerokoœæ (500).
  * 
  * @author Maciej Tarnowski, Marcin Krasuski

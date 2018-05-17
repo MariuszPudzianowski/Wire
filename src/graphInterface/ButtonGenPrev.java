@@ -3,7 +3,7 @@ package graphInterface;
 import Wire.*;
 
 /**
- * Klasa opisuje zachowanie i funkcjê przycisku Gen -1.
+ * Klasa opisuje zachowanie i funkcjê przycisku Gen -1. a
  * Przycisk po naciœniêciu wyœwietla poprzedni¹ generacjê.
  * 
  * @author Maciej Tarnowski, Marcin Krasuski

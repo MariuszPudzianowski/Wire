@@ -3,7 +3,7 @@ package graphInterface;
 import javax.swing.*;
 
 /**
- * Klasa jest implementacj¹ okna z komunikatem o b³êdzie.
+ * Klasa jest implementacj¹ okna z komunikatem o b³êdzie.a
  *
  * @author Maciej Tarnowski, Marcin Krasuski
  */
