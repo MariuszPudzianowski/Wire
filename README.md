@@ -13,4 +13,4 @@ Kod aplikacji jest funkcjonalny, lecz słabej jakości. Dzisiaj oczywiście napi
 
 For a quick demo run the app, click the 'Load conf.' button and click 'START' to run the default simulation.
 
-This application's code is functional, but of poor quality. If we were to code it today, we obviously wouldn't have done it this way. However, it's not worth refactoring, as a majority of the code would have to be rewritten. Having said that, adding new Wire object types or simple functionality is still pretty easy.
+This application's code is functional, but of poor quality. If we were to code it today, we obviously wouldn't have done it this way. However, it's not worth refactoring, as a majority of the code would have to be rewritten. Having said that, adding new Wire object types or some simple functionality is still pretty easy.
