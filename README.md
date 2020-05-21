@@ -1,16 +1,18 @@
 # Wire
-Maciej Tarnowski, Marcin Krasuski
+Marcin Krasuski, Maciej Tarnowski
 
-(PL) Aplikacja będąca implementacją automatu komórkowego WireWorld. Zasada działania automatu i funkcjonalność aplikacji opisane są w Specyfikacji.
+(PL) Aplikacja będąca implementacją automatu komórkowego Wireworld. Zasada działania automatu i funkcjonalność aplikacji opisane są w Specyfikacji. Możesz też zajrzeć na stronę dotyczącą Wireworld w Wikipedii:
+https://pl.wikipedia.org/wiki/Wireworld
 
 Dla szybkiego pokazu uruchom aplikację, kliknij przycisk "Load conf." i naciśnij "START", aby rozpocząć domyślną symulację.
 
-Aplikacja jest funkcjonalna, lecz jej kod jest słabej jakości. Dzisiaj oczywiście napisalibyśmy go inaczej, ale nie jest on warty refaktoryzacji (baza w zasadzie musiałaby być napisana od nowa). Mimo to dodanie nowych rodzajów obiektów czy prostych funkcjonalności jest stosunkowo proste.
+Aplikacja może być rozszerzona przez dodanie nowych rodzajów obiektów i funkcjonalności symulatora.
 
 =======================================
 
-(EN) An application implementing the WireWorld cellular automata. Basic rules for the automata along with application functionality are described in the file 'Specyfikacja' in Polish.
+(EN) An application implementing the Wireworld cellular automata. Basic rules for the automata along with application functionality are described in the file 'Specyfikacja' in Polish. You can also refer to the Wireworld's wiki page:
+https://en.wikipedia.org/wiki/Wireworld
 
 For a quick demo run the app, click the 'Load conf.' button and click 'START' to run the default simulation.
 
-This application is functional, but poorly coded. If we were to code it today, we obviously wouldn't have done it this way. However, it's not worth refactoring, as a majority of the code would have to be rewritten. Having said that, adding new Wire object types or some simple functionality is still pretty easy.
+Application can be extended by adding new object types and simulator functionalities.
